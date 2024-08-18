@@ -9,10 +9,17 @@
 # Return the resulting string.
 
 def verbing(s):
-    # +++your code here+++
-    return
-
-
+    if len(s) > 3 and s.endswith("ing"):
+        new_s = s + "ly"
+        return new_s
+    if len(s) > 3 and not s.endswith("ing"):
+            new_s = s + "ing"
+            return new_s
+    if len(s) < 3:
+        new_s = s
+        return new_s
+        
+    
 # E. not_bad
 # Given a string, find the first appearance of the
 # substring 'not' and 'bad'. If the 'bad' follows
@@ -24,7 +31,12 @@ def verbing(s):
 
 def not_bad(s):
     # +++your code here+++
-    return
+    if s.find("not") < s.find("bad"):
+        not_bad = s[s.find("not"):]
+        replacement = s.replace(not_bad, "good")
+        return replacement
+    else: 
+        return s
 
 
 # F. front_back
@@ -37,6 +49,9 @@ def not_bad(s):
 
 def front_back(a, b):
     # +++your code here+++
+    
+
+        
     return
 
 
